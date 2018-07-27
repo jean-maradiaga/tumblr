@@ -46,7 +46,9 @@ gulp.task('modal', () => {
 
 gulp.task('watch', () => {
     gulp.watch('src/sass/**/*.scss', ['styles'],cb => cb)
+    gulp.watch('src/img/**/*.{gif,jpg,png,svg}', ['img'],cb => cb)
     gulp.watch('src/**/*.html', ['html'],cb => cb)
+    gulp.watch('src/js/**/*.js', ['js'],cb => cb)
 })
 
 gulp.task('server', () => {

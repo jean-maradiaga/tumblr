@@ -1,4 +1,4 @@
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('upload_modal');
 
 // Get the link that opens the modal
 var btn = document.getElementById("cta_photo");

@@ -1,321 +1,39 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <title>Tumblr</title>
+<head>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta charset="utf-8">
-  </head>
+</head>
 
-  <body>
-    <header class="header --mb">
-      <nav class="header__nav navbar navbar-expand-lg navbar-light">
-        <div class="container">
-        <a class="navbar-brand" href="#">
-          <img class="header__nav__logo" src="img/tumblrIcon.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="form-inline my-2 my-lg-0 searchform">
-            <input class="form-control searchform__input fas fa-search" type="search" placeholder="  &#xf002;   Search Tumblr" aria-label="Search">
-          </form>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link nav__icon" href="#">
-                <i class="fa fa-home" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__icon" href="#">
-                <i class="fa fa-compass" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__icon" href="#">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__icon" href="#">
-                <i class="fa fa-comment-o" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__icon" href="#">
-                <i class="fa fa-bolt" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__icon" href="#">
-                <i class="fa fa-user-o" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__icon nav__sqr" href="#">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<body class="body--theme-login">
     <div class="container">
-      <div class="row">
-        <main class="col-lg-7 offset-lg-1">
-          <section class="row">
-            <div class="col-lg-2 d-sm-none d-sm-none d-md-block">
-              <img class="lg__profile" src="img/pPhotoRetroGirl.png" alt="">
-            </div>
-            <div class="col-lg-10">
-              <div class="panel main__panel panel--mb">
-                <nav>
-                  <ul class="list--space-evenly list--unstyled --pt">
-                    <li>
-                      <a href="#">
-                        <span class="main__panel__icon sprite sprite__text"></span>
-                        <span class="main__panel__icon__undertext">Text</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#modal" id="cta_photo">
-                        <span class="main__panel__icon sprite sprite__camera"></span>
-                        <span class="main__panel__icon__undertext">Photo</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class=>
-                        <span class="main__panel__icon sprite sprite__quote"></span>
-                        <span class="main__panel__icon__undertext">Quote</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="main__panel__icon sprite sprite__link"></span>
-                        <span class="main__panel__icon__undertext">Link</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="main__panel__icon sprite sprite__chat"></span>
-                        <span class="main__panel__icon__undertext">Chat</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="main__panel__icon sprite sprite__audio"></span>
-                        <span class="main__panel__icon__undertext">Audio</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="main__panel__icon sprite sprite__video"></span>
-                        <span class="main__panel__icon__undertext">Video</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </section>
-          <article class="row">
-            <div class="col-lg-2 d-sm-none d-sm-none d-md-block">
-              <img class="lg__profile" src="img/pPhotoGuy.png" alt="">
-            </div>
-            <div class="col-lg-10">
-              <div class="panel main_panel panel--mb">
-                <div class="panel__header">
-                  <span class="panel__text">Here's a blog:</span>
-                  <span class="username">bob-strauss</span>
-                  <a href="#" class="follow">Follow</a>
-                  <div class="float-right">
-                    <button class="panel__option">
-                      <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                    <button class="panel__option">
-                      <i class="fa fa-compass" aria-hidden="true"></i>
-                    </button>
-                  </div>
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4">
+                <img class="login__logo mx-auto d-block" src="img/tumblrLogo.png" alt="">
+                <form action="/dashboard.html">
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Email" required>
                 </div>
-                <section>
-                  <img src="img/mainPhoto.png" alt="" class="image__post">
-                </section>
-                <div class="panel panel__footer">
-                  <span class="tags">#forest #nature #darkness #blackforest</span>
-                  <span class="notes">234,450 notes</span>
-                  <ul class="float-right list--unstyled list--space-evenly">
-                    <li>
-                      <button class="panel__option">
-                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="panel__option">
-                        <i class="fa fa-comment-o" aria-hidden="true"></i>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="panel__option">
-                        <i class="fa fa-exchange" aria-hidden="true"></i>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="panel__option">
-                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                      </button>
-                    </li>
-                  </ul>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-login" id="btn-login">Next</button>
                 </div>
-              </div>
-            </div>
-          </article>
-        </main>
-        <aside class="col-lg-3 offset-lg-1">
-          <section class="panel side__panel panel--mb">
-            <h3 class="recommended__blogs__text">RECOMMENDED BLOGS</h3>
-            <ul class="list--unstyled">
-              <li>
-                  <div class="recommended__blog">
-                    <img class="sm__profile float-left" src="img/pPhotoR1.png" alt="">
-                    <a href="#" class="float-right plusbox">
-                      <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                    </a>
-                    <div>
-                      <span class="username">username</span>
-                      <span class="recommended__blog__name">Tumblr blog name</span>
-                    </div>
-                  </div>
-                  <hr class="recommended__blogs__separator">
-              </li>
-              <li>
-                  <div class="recommended__blog">
-                      <img class="sm__profile float-left" src="img/pPhotoR2.png" alt="">
-                      <a href="#" class="float-right plusbox">
-                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                      </a>
-                      <div>
-                        <span class="username">username</span>
-                        <span class="recommended__blog__name">Tumblr blog name</span>
-                      </div>
-                    </div>
-                    <hr class="recommended__blogs__separator">
-              </li>
-              <li>
-                  <div class="recommended__blog">
-                      <img class="sm__profile float-left" src="img/pPhotoR3.png" alt="">
-                      <a href="#" class="float-right plusbox">
-                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                      </a>
-                      <div>
-                        <span class="username">username</span>
-                        <span class="recommended__blog__name">Tumblr blog name</span>
-                      </div>
-                    </div>
-                    <hr class="recommended__blogs__separator">
-              </li>
-              <li>
-                  <div class="recommended__blog">
-                      <img class="sm__profile float-left" src="img/pPhotoR4.png" alt="">
-                      <a href="#" class="float-right plusbox">
-                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                      </a>
-                      <div>
-                        <span class="username">username</span>
-                        <span class="recommended__blog__name">Tumblr blog name</span>
-                      </div>
-                    </div>
-                    <hr class="recommended__blogs__separator">
-              </li>
-            </ul>
-            <a href="#" class="explore">EXPLORE TUMBLR</a>
-          </section>
-          <section class="panel side__panel">
-            <h3 class="recommended__blogs__text">RADAR</h3>
-            <div class="recommended__blog">
-              <img class="sm__profile float-left" src="img/pPhotoRadarGirl.png" alt="">
-              <a href="#" class="float-right plusbox">
-                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-              </a>
-              <div>
-                <span class="username">username</span>
-                <span class="recommended__blog__name">Tumblr blog name</span>
-              </div>
-            </div>
-            <img class="radar__img" src="img/radarPhoto.png" alt="">
-            <div class="radar__bottom">
-              <span class="notes">1,320 notes</span>
-              <div class="float-right">
-                <a href="#" class="panel__option option__turn"><i class="fa fa-exchange" aria-hidden="true"></i></a>
-                <a href="#" class="panel__option option__heart"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </section>
-        </aside>
-      </div>
-    </div>
-
-    <!-- <section class="modal">
-      <div class="row">
-        <div class="col-lg-7 offset-lg-3">
-          <div class="modal-left-panel modal__bg">
-              <i class="fas fa-camera"></i>
-              <span>Upload photod</span>
-          </div>
-          <div class="modal-right-panel modal__bg">
-              <i class="fas fa-globe"></i>
-              <span>Upload photod</span>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal__panel__header">
-            <span class="modal__text">mikemike <i class="fa fa-caret-down modal__icon"></i></span>
-            <span class=""><i class="fa fa-cog float-right modal__icon"></i></span>
-          </div>
-          <div class="modal__panel__body">
-            <div class="modal__panel border-right">
-                <ul class="list--space-evenly list--unstyled">
-                  <li>
-                    <a>
-                       <span class=""><i class="fa fa-camera modal__cta"></i></span>
-                       <span class="main__panel__icon__undertext undertext--gray">Upload Photos</span>
-                    </a>
-                  </li>
+                <div class="form-group">
+                    <a class="login__sign-up" href="#">Sign up</a>
+                </div>
+                </form>
+                <ul class="list--space-evenly list--unstyled login__terms">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Support</a></li>
                 </ul>
             </div>
-            <div class="modal__panel border-left">
-                <ul class="list--space-evenly list--unstyled">
-                    <li>
-                      <a>
-                         <span class=""><i class="fa fa-globe modal__cta"></i></span>
-                         <span class="main__panel__icon__undertext undertext--gray">Upload Photos</span>
-                      </a>
-                    </li>
-                  </ul>
-            </div>
-          </div>
-          <div class="modal__panel__footer">
-              <a href="#" class="modal--close" id="close"><span>CLOSE</span></a>
-              <div class="float-right">
-                <span class=""><i class="fa fa-twitter modal__icon"></i></span>
-                <button class="btn btn-post">POST   <i class="fa fa-caret-down modal__btn__icon"></i></button>
-              </div>
-          </div>
         </div>
-      
-      </div>
+    </div>
 
-
-    <script type="text/javascript" src="js/index.js"></script>
-  </body>
+</body>
+    <script type="text/javascript" src="js/login.js"></script>
 </html>
