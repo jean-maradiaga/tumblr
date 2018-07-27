@@ -30,14 +30,25 @@ gulp.task('html', () => {
 })
 
 gulp.task('img', () => {
-    return gulp.src('src/**/*.png')
-      .pipe(gulp.dest('build/'))
-  })
+  return gulp.src('src/img/**/*.{gif,jpg,png,svg}')
+    .pipe(gulp.dest('build/img/'))
+})
+
+gulp.task('js', () => {
+  return gulp.src('src/js/**/*.js')
+    .pipe(gulp.dest('build/js/'))
+})
+
+gulp.task('modal', () => {
+  return gulp.src('/node_modules/bootstrap/js/src/modal.js')
+    .pipe(gulp.dest('build/js/'))
+})
 
 gulp.task('watch', () => {
     gulp.watch('src/sass/**/*.scss', ['styles'],cb => cb)
     gulp.watch('src/**/*.html', ['html'],cb => cb)
 })
+
 gulp.task('server', () => {
   gulp.src('build/')
     .pipe(webserver({
@@ -61,5 +72,6 @@ gulp.task('watch-server', ['server','watch'])
 gulp.task('build', [
   'html',
   'img',
-  'styles'
+  'styles',
+  'js'
 ], cb => cb)

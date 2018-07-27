@@ -2,8 +2,9 @@
 <html>
 
   <head>
-    <title>Tumblr Test</title>
+    <title>Tumblr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta charset="utf-8">
   </head>
@@ -82,7 +83,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#modal" id="cta_photo">
                         <span class="main__panel__icon sprite sprite__camera"></span>
                         <span class="main__panel__icon__undertext">Photo</span>
                       </a>
@@ -257,6 +258,64 @@
         </aside>
       </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+
+    <!-- <section class="modal">
+      <div class="row">
+        <div class="col-lg-7 offset-lg-3">
+          <div class="modal-left-panel modal__bg">
+              <i class="fas fa-camera"></i>
+              <span>Upload photod</span>
+          </div>
+          <div class="modal-right-panel modal__bg">
+              <i class="fas fa-globe"></i>
+              <span>Upload photod</span>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal__panel__header">
+            <span class="modal__text">mikemike <i class="fa fa-caret-down modal__icon"></i></span>
+            <span class=""><i class="fa fa-cog float-right modal__icon"></i></span>
+          </div>
+          <div class="modal__panel__body">
+            <div class="modal__panel border-right">
+                <ul class="list--space-evenly list--unstyled">
+                  <li>
+                    <a>
+                       <span class=""><i class="fa fa-camera modal__cta"></i></span>
+                       <span class="main__panel__icon__undertext undertext--gray">Upload Photos</span>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+            <div class="modal__panel border-left">
+                <ul class="list--space-evenly list--unstyled">
+                    <li>
+                      <a>
+                         <span class=""><i class="fa fa-globe modal__cta"></i></span>
+                         <span class="main__panel__icon__undertext undertext--gray">Upload Photos</span>
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+          <div class="modal__panel__footer">
+              <a href="#" class="modal--close" id="close"><span>CLOSE</span></a>
+              <div class="float-right">
+                <span class=""><i class="fa fa-twitter modal__icon"></i></span>
+                <button class="btn btn-post">POST   <i class="fa fa-caret-down modal__btn__icon"></i></button>
+              </div>
+          </div>
+        </div>
+      
+      </div>
+
+
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
