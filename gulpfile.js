@@ -8,7 +8,7 @@ let path = require('path')
 
 /* Styles task */
 gulp.task('styles',['lint-css','webfonts'], () => {
-  return gulp.src('src/sass/main.scss')
+  return gulp.src('src/assets/sass/main.scss')
     .pipe(sass({
       includePaths: [
         path.join(__dirname, '/node_modules/bootstrap/scss'),
@@ -16,12 +16,12 @@ gulp.task('styles',['lint-css','webfonts'], () => {
       ],
       outputStyle: 'compressed'
     }))
-    .pipe(gulp.dest('build/css/'));
+    .pipe(gulp.dest('build/assets/css/'));
 })
 
 gulp.task('webfonts', () => {
   return gulp.src('node_modules/font-awesome/fonts/**/*')
-  .pipe(gulp.dest('build/fonts'));
+  .pipe(gulp.dest('build/assets/fonts'));
 })
 
 gulp.task('html', () => {
@@ -30,18 +30,18 @@ gulp.task('html', () => {
 })
 
 gulp.task('img', () => {
-  return gulp.src('src/img/**/*.{gif,jpg,png,svg}')
-    .pipe(gulp.dest('build/img/'))
+  return gulp.src('src/assets/img/**/*.{gif,jpg,png,svg}')
+    .pipe(gulp.dest('build/assets/img/'))
 })
 
 gulp.task('js', () => {
-  return gulp.src('src/js/**/*.js')
-    .pipe(gulp.dest('build/js/'))
+  return gulp.src('src/assets/js/**/*.js')
+    .pipe(gulp.dest('build/assets/js/'))
 })
 
 gulp.task('modal', () => {
   return gulp.src('/node_modules/bootstrap/js/src/modal.js')
-    .pipe(gulp.dest('build/js/'))
+    .pipe(gulp.dest('build/assets/js/'))
 })
 
 gulp.task('watch', () => {
@@ -61,7 +61,7 @@ gulp.task('server', () => {
 
 gulp.task('lint-css', () => {
 
-    gulp.src('src/sass/main.scss')
+    gulp.src('src/assets/sass/main.scss')
     .pipe(gulpStylelint({
       reporters: [
         {formatter: 'string', console: true}
@@ -71,7 +71,7 @@ gulp.task('lint-css', () => {
 
 gulp.task('watch-server', ['server','watch'])
 
-gulp.task('build', [
+gulp.task('pack', [
   'html',
   'img',
   'styles',

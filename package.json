@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles": "gulp styles",
-    "build": "gulp build",
+    "pack": "gulp pack",
     "start": "gulp watch-server"
   },
   "author": "Jean",
