@@ -4,6 +4,9 @@ let gutil =  require('gulp-util')
 let sass = require('gulp-sass')
 let webserver = require('gulp-webserver');
 let gulpStylelint = require('gulp-stylelint');
+let eslint = require('gulp-eslint');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 let path = require('path')
 
 /* Styles task */
@@ -34,21 +37,16 @@ gulp.task('img', () => {
     .pipe(gulp.dest('build/assets/img/'))
 })
 
-gulp.task('js', () => {
+gulp.task('js',['lint-js'], () => {
   return gulp.src('src/assets/js/**/*.js')
     .pipe(gulp.dest('build/assets/js/'))
 })
 
-gulp.task('modal', () => {
-  return gulp.src('/node_modules/bootstrap/js/src/modal.js')
-    .pipe(gulp.dest('build/assets/js/'))
-})
-
 gulp.task('watch', () => {
-    gulp.watch('src/sass/**/*.scss', ['styles'],cb => cb)
-    gulp.watch('src/img/**/*.{gif,jpg,png,svg}', ['img'],cb => cb)
+    gulp.watch('src/assets/sass/**/*.scss', ['styles'],cb => cb)
+    gulp.watch('src/assets/img/**/*.{gif,jpg,png,svg}', ['img'],cb => cb)
     gulp.watch('src/**/*.html', ['html'],cb => cb)
-    gulp.watch('src/js/**/*.js', ['js'],cb => cb)
+    gulp.watch('src/assets/js/**/*.js', ['js'],cb => cb)
 })
 
 gulp.task('server', () => {
@@ -68,6 +66,33 @@ gulp.task('lint-css', () => {
       ]
     }));
 });
+
+gulp.task('lint-js', () => {
+  return gulp.src(['src/assets/*.js'])
+      // eslint() attaches the lint output to the "eslint" property
+      // of the file object so it can be used by other modules.
+      .pipe(eslint({
+        rules: {
+          "comma-dangle": 2
+        }
+      }))
+      // eslint.format() outputs the lint results to the console.
+      // Alternatively use eslint.formatEach() (see Docs).
+      .pipe(eslint.format())
+      // To have the process exit with an error code (1) on
+      // lint error, return the stream and pipe to failAfterError last.
+      .pipe(eslint.failAfterError());
+});
+
+// gulp.task('js', function (cb) {
+//   pump([
+//         gulp.src('src/assets/**/*.js'),
+//         uglify(),
+//         gulp.dest('build/assets/js/')
+//     ],
+//     cb
+//   );
+// });
 
 gulp.task('watch-server', ['server','watch'])
 
